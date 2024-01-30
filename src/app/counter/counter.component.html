@@ -1,0 +1,16 @@
+<table border="1">
+  <tr>
+    <th>Product</th>
+    <th>Price</th>
+  </tr>
+  @for (datos of data; track datos.id) {
+
+  <tr>
+    <td>{{datos.title}}</td>
+    <td>{{datos.price}}</td>
+  </tr>
+
+  } @empty {
+  <option>Sin Datos para mostrar</option>
+  }
+</table>

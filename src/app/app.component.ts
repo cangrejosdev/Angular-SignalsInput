@@ -13,7 +13,7 @@ export class AppComponent {
   title = 'signalInput';
 
   counter = 1;
-
+//Funcion para incrementar el valor del counter que es el signal
   onIncrement() {
     this.counter = this.counter + 1;
     console.log('incremented');

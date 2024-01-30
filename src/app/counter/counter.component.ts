@@ -11,14 +11,12 @@ export class CounterComponent {
   constructor() {
     effect(() =>{
       console.log('Counter value changed to ' + this.value());
-      this.getDataUnidades()
+      this.getProducts()
     })
   }
-  async getDataUnidades() {
+  async getProducts() {
     const response = await fetch(`https://fakestoreapi.com/products?limit=${this.value()}`);
     const ELEMENT_DATA = await response.json();
     this.data = ELEMENT_DATA
-
-   console.log(ELEMENT_DATA);
   }
 }
